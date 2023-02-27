@@ -15,30 +15,36 @@ class Sex(models.Model):
         return self.name
 
 class Degree(models.Model):
-    name = models.CharField(max_length=10, null=False)
+    name = models.CharField(max_length=10)
 
     def __str__(self):
         return self.name
 
 class Subject(models.Model):
-    name = models.CharField(max_length=30, null=False)
+    name = models.CharField(max_length=30)
 
     def __str__(self):
         return self.name
 
 class Municipality(models.Model):
-    name = models.CharField(max_length=30, null=False)
+    name = models.CharField(max_length=30)
 
     def __str__(self):
         return self.name
 
 class Educationallevel(models.Model):
-    name = models.CharField(max_length=30, null=False)
+    name = models.CharField(max_length=30)
 
     def __str__(self):
         return self.name
 
 class Modality(models.Model):
+    name = models.CharField(max_length=30)
+
+    def __str__(self):
+        return self.name
+
+class Section(models.Model):
     name = models.CharField(max_length=30)
 
     def __str__(self):
