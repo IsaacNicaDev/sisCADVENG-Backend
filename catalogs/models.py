@@ -10,6 +10,15 @@ class Sex(models.Model):
     )
     name = models.CharField(max_length=10, null=False)
     description = models.CharField(max_length=1, choices=DESCRIPTION)
-    
+
     def __str__(self):
         return self.name
+
+class Degree(models.Model):
+    name = models.CharField(max_length=10, null=False)
+
+    def __str__(self):
+        return self.name
+
+
+
