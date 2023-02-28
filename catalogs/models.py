@@ -3,73 +3,73 @@ from django.db import models
 # Create your models here.
 
 
-class Sex(models.Model):
-    DESCRIPTION = (
+class Sexo(models.Model):
+    DESCRIPCION = (
         ("F", "Femenino"),
-        ("M", "Maculino"),
+        ("M", "Masculino"),
     )
-    name = models.CharField(max_length=10, null=False)
-    description = models.CharField(max_length=1, choices=DESCRIPTION)
+    nombre = models.CharField(max_length=10, null=False)
+    descripcion = models.CharField(max_length=1, choices=DESCRIPCION)
 
     def __str__(self):
-        return self.name
+        return self.nombre
 
-class Degree(models.Model):
-    name = models.CharField(max_length=10)
+class Grado(models.Model):
+    nombre = models.CharField(max_length=10)
 
     def __str__(self):
-        return self.name
+        return self.nombre
 
-class Subject(models.Model):
+class Asignatura(models.Model):
+    nombre = models.CharField(max_length=30)
+
+    def __str__(self):
+        return self.nombre
+
+class Municipio(models.Model):
+    nombre = models.CharField(max_length=30)
+
+    def __str__(self):
+        return self.nombre
+
+class NivelEducativo(models.Model):
     name = models.CharField(max_length=30)
 
     def __str__(self):
         return self.name
 
-class Municipality(models.Model):
-    name = models.CharField(max_length=30)
+class Modalidad(models.Model):
+    nombre = models.CharField(max_length=30)
 
     def __str__(self):
-        return self.name
+        return self.nombre
 
-class Educationallevel(models.Model):
-    name = models.CharField(max_length=30)
-
-    def __str__(self):
-        return self.name
-
-class Modality(models.Model):
-    name = models.CharField(max_length=30)
+class Seccion(models.Model):
+    nombre = models.CharField(max_length=30)
 
     def __str__(self):
-        return self.name
+        return self.nombre
 
-class Section(models.Model):
-    name = models.CharField(max_length=30)
-
-    def __str__(self):
-        return self.name
-
-class Turn(models.Model):
-    name = models.CharField(max_length=30)
+class Turno(models.Model):
+    nombre = models.CharField(max_length=30)
 
     def __str__(self):
-        return self.name
+        return self.nombre
 
-class Educationalinstitution(models.Model):
-    name = models.CharField(max_length=30)
-
-    def __str__(self):
-        return self.name
-
-class Typeincome(models.Model):
-    name = models.CharField(max_length=30)
+class CentroEducativo(models.Model):
+    nombre = models.CharField(max_length=30)
 
     def __str__(self):
-        return self.name
+        return self.nombre
 
-class City(models.Model):
-    name = models.CharField(max_length=30)
+class TipoIngreso(models.Model):
+    nombre = models.CharField(max_length=30)
 
     def __str__(self):
-        return self.name   
+        return self.nombre
+
+class Ciudad(models.Model):
+    nombre = models.CharField(max_length=30)
+
+    def __str__(self):
+        return self.nombre   
