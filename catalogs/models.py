@@ -41,12 +41,12 @@ class Municipio(models.Model):
         return self.nombre
 
 class NivelEducativo(models.Model):
-    name = models.CharField(max_length=30)
+    nombre = models.CharField(max_length=30)
     created_at = models.DateTimeField(auto_now_add= True)
     updated_at = models.DateTimeField(auto_now_add= True)
 
     def __str__(self):
-        return self.name
+        return self.nombre
 
 class Modalidad(models.Model):
     nombre = models.CharField(max_length=30)
