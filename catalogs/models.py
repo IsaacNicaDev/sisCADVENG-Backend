@@ -1,170 +1,170 @@
 from django.db import models
+from django.utils import timezone
 
 # Create your models here.
 
 
-class Sexo(models.Model):
-    DESCRIPCION = (
-        ("F", "Femenino"),
+class Gender(models.Model):
+    DESCRIPTION = (
         ("M", "Masculino"),
+        ("F", "Femenino"),
     )
-    nombre = models.CharField(max_length=10, null=False)
-    descripcion = models.CharField(max_length=1, choices=DESCRIPCION)
+    name = models.CharField(max_length=1, choices=DESCRIPTION, unique=True)
     created_at = models.DateTimeField(auto_now_add= True)
-    updated_at = models.DateTimeField(auto_now_add= True)
+    updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return self.nombre
+        return self.name
 
-class Grado(models.Model):
-    nombre = models.CharField(max_length=10)
+class Grade(models.Model):
+    name = models.CharField(max_length=10, unique=True)
     created_at = models.DateTimeField(auto_now_add= True)
-    updated_at = models.DateTimeField(auto_now_add= True)
+    updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return self.nombre
+        return self.name
 
-class Asignatura(models.Model):
-    nombre = models.CharField(max_length=30)
+class Subject(models.Model):
+    name = models.CharField(max_length=30, unique=True)
     created_at = models.DateTimeField(auto_now_add= True)
-    updated_at = models.DateTimeField(auto_now_add= True)
+    updated_at = models.DateTimeField(auto_now= True)
 
     def __str__(self):
-        return self.nombre
+        return self.name
 
-class Municipio(models.Model):
-    nombre = models.CharField(max_length=30)
+class Municipality(models.Model):
+    name = models.CharField(max_length=30, unique=True)
     created_at = models.DateTimeField(auto_now_add= True)
-    updated_at = models.DateTimeField(auto_now_add= True)
+    updated_at = models.DateTimeField(auto_now= True)
 
     def __str__(self):
-        return self.nombre
+        return self.name
 
-class NivelEducativo(models.Model):
-    nombre = models.CharField(max_length=30)
+class EducationalLevel(models.Model):
+    name = models.CharField(max_length=30, unique=True)
     created_at = models.DateTimeField(auto_now_add= True)
-    updated_at = models.DateTimeField(auto_now_add= True)
+    updated_at = models.DateTimeField(auto_now= True)
 
     def __str__(self):
-        return self.nombre
+        return self.name
 
-class Modalidad(models.Model):
-    nombre = models.CharField(max_length=30)
+class Modality(models.Model):
+    name = models.CharField(max_length=30, unique=True)
     created_at = models.DateTimeField(auto_now_add= True)
-    updated_at = models.DateTimeField(auto_now_add= True)
+    updated_at = models.DateTimeField(auto_now= True)
 
     def __str__(self):
-        return self.nombre
+        return self.name
 
-class Seccion(models.Model):
-    nombre = models.CharField(max_length=30)
+class Section(models.Model):
+    name = models.CharField(max_length=30, unique=True)
     created_at = models.DateTimeField(auto_now_add= True)
-    updated_at = models.DateTimeField(auto_now_add= True)
+    updated_at = models.DateTimeField(auto_now= True)
 
     def __str__(self):
-        return self.nombre
+        return self.name
 
-class Turno(models.Model):
-    nombre = models.CharField(max_length=30)
+class Shift(models.Model):
+    name = models.CharField(max_length=30, unique=True)
     created_at = models.DateTimeField(auto_now_add= True)
-    updated_at = models.DateTimeField(auto_now_add= True)
+    updated_at = models.DateTimeField(auto_now= True)
 
     def __str__(self):
-        return self.nombre
+        return self.name
 
-class CentroEducativo(models.Model):
-    nombre = models.CharField(max_length=30)
+class EducationalInstitution(models.Model):
+    name = models.CharField(max_length=30, unique=True)
     created_at = models.DateTimeField(auto_now_add= True)
-    updated_at = models.DateTimeField(auto_now_add= True)
+    updated_at = models.DateTimeField(auto_now= True)
 
     def __str__(self):
-        return self.nombre
+        return self.name
 
-class TipoIngreso(models.Model):
-    nombre = models.CharField(max_length=30)
+class EnrolmentType(models.Model):
+    name = models.CharField(max_length=30, unique=True)
     created_at = models.DateTimeField(auto_now_add= True)
-    updated_at = models.DateTimeField(auto_now_add= True)
+    updated_at = models.DateTimeField(auto_now= True)
 
     def __str__(self):
-        return self.nombre
+        return self.name
 
-class Ciudad(models.Model):
-    nombre = models.CharField(max_length=30)
+class City(models.Model):
+    name = models.CharField(max_length=30, unique=True)
     created_at = models.DateTimeField(auto_now_add= True)
-    updated_at = models.DateTimeField(auto_now_add= True)
+    updated_at = models.DateTimeField(auto_now= True)
 
     def __str__(self):
-        return self.nombre
+        return self.name
 
-class Pais(models.Model):
-    nombre = models.CharField(max_length=30)
+class Country(models.Model):
+    name = models.CharField(max_length=30, unique=True)
     created_at = models.DateTimeField(auto_now_add= True)
-    updated_at = models.DateTimeField(auto_now_add= True)
+    updated_at = models.DateTimeField(auto_now= True)
 
     def __str__(self):
-        return self.nombre
+        return self.name
     
-class Idioma(models.Model):
-    nombre = models.CharField(max_length=30)
+class Language(models.Model):
+    name = models.CharField(max_length=30, unique=True)
     created_at = models.DateTimeField(auto_now_add= True)
-    updated_at = models.DateTimeField(auto_now_add= True)
+    updated_at = models.DateTimeField(auto_now= True)
 
     def __str__(self):
-        return self.nombre
+        return self.name
 
-class Etnia(models.Model):
-    nombre = models.CharField(max_length=30)
+class Ethnicity(models.Model):
+    name = models.CharField(max_length=30, unique=True)
     created_at = models.DateTimeField(auto_now_add= True)
-    updated_at = models.DateTimeField(auto_now_add= True)
+    updated_at = models.DateTimeField(auto_now= True)
 
     def __str__(self):
-        return self.nombre
+        return self.name
     
-class Discapacidad(models.Model):
-    nombre = models.CharField(max_length=30)
+class Disability(models.Model):
+    name = models.CharField(max_length=30, unique=True)
     created_at = models.DateTimeField(auto_now_add= True)
-    updated_at = models.DateTimeField(auto_now_add= True)
+    updated_at = models.DateTimeField(auto_now= True)
 
     def __str__(self):
-        return self.nombre      
+        return self.name      
 
 class Religion(models.Model):
-    nombre = models.CharField(max_length=30)
+    name = models.CharField(max_length=30, unique=True)
     created_at = models.DateTimeField(auto_now_add= True)
-    updated_at = models.DateTimeField(auto_now_add= True)
+    updated_at = models.DateTimeField(auto_now= True)
 
     def __str__(self):
-        return self.nombre      
+        return self.name   
 
 
-class Departamento(models.Model):
-    nombre = models.CharField(max_length=30)
+class Departament(models.Model):
+    name = models.CharField(max_length=30, unique=True)
     created_at = models.DateTimeField(auto_now_add= True)
-    updated_at = models.DateTimeField(auto_now_add= True)
+    updated_at = models.DateTimeField(auto_now= True)
 
     def __str__(self):
-        return self.nombre      
+        return self.name     
 
-class DelegacionDepartamental(models.Model):
-    nombre = models.CharField(max_length=30)
+class DepartamentalDelegation(models.Model):
+    name = models.CharField(max_length=30, unique=True)
     created_at = models.DateTimeField(auto_now_add= True)
-    updated_at = models.DateTimeField(auto_now_add= True)
+    updated_at = models.DateTimeField(auto_now= True)
 
     def __str__(self):
-        return self.nombre
+        return self.name
     
-class Zona(models.Model):
-    nombre = models.CharField(max_length=30)
+class Zone(models.Model):
+    name = models.CharField(max_length=30, unique=True)
     created_at = models.DateTimeField(auto_now_add= True)
-    updated_at = models.DateTimeField(auto_now_add= True)
+    updated_at = models.DateTimeField(auto_now= True)
 
     def __str__(self):
-        return self.nombre
+        return self.name
 
-class Barrio(models.Model):
-    nombre = models.CharField(max_length=30)
+class District(models.Model):
+    name = models.CharField(max_length=30, unique=True)
     created_at = models.DateTimeField(auto_now_add= True)
-    updated_at = models.DateTimeField(auto_now_add= True)
+    updated_at = models.DateTimeField(auto_now= True)
 
     def __str__(self):
-        return self.nombre
+        return self.name

@@ -1,47 +1,47 @@
 from rest_framework import routers
 
-from .api import SexoViewSet
-from .api import GradoViewSet
-from .api import AsignaturaViewSet
-from .api import MunicipioViewSet
-from .api import NivelEducativoViewSet
-from .api import ModalidadViewSet
-from .api import SeccionViewSet
-from .api import TurnoViewSet
-from .api import CentroEducativoViewSet
-from .api import TipoIngresoViewSet
-from .api import CiudadViewSet
-from .api import PaisViewSet
-from .api import IdiomaViewSet
-from .api import EtniaViewSet
-from .api import DiscapacidadViewSet
+from .api import GenderViewSet
+from .api import GradeViewSet
+from .api import SubjectViewSet
+from .api import MunicipalityViewSet
+from .api import EducationalLevelViewSet
+from .api import ModalityViewSet
+from .api import SectionViewSet
+from .api import ShiftViewSet
+from .api import EducationalInstitutionViewSet
+from .api import EnrolmentTypeViewSet
+from .api import CityViewSet
+from .api import CountryViewSet
+from .api import LanguageViewSet
+from .api import EthnicityViewSet
+from .api import DisabilityViewSet
 from .api import ReligionViewSet
-from .api import DepartamentoViewSet
-from .api import DelegacionDepartamentalViewSet
-from .api import ZonaViewSet
-from .api import BarrioViewSet
+from .api import DepartamentViewSet
+from .api import DepartamentalDelegationViewSet
+from .api import ZoneViewSet
+from .api import DistrictViewSet
 
 router = routers.DefaultRouter()
 
-router.register('sexo', SexoViewSet, 'sexo'),
-router.register('grado', GradoViewSet, 'grado')
-router.register('asignatura', AsignaturaViewSet, 'asignatura')
-router.register('municipio', MunicipioViewSet, 'municipio')
-router.register('nivelEducativo', NivelEducativoViewSet, 'nivelEducativo')
-router.register('modalidad', ModalidadViewSet, 'modalidad')
-router.register('seccion', SeccionViewSet, 'seccion')
-router.register('turno', TurnoViewSet, 'turno')
-router.register('centroEducativo', CentroEducativoViewSet, 'centroEducativo')
-router.register('tipoIngreso', TipoIngresoViewSet, 'tipoIngreso')
-router.register('ciudad', CiudadViewSet, 'ciudad')
-router.register('pais', PaisViewSet, 'pais')
-router.register('idioma', IdiomaViewSet, 'idioma')
-router.register('etnia', EtniaViewSet, 'etnia')
-router.register('discapacidad', DiscapacidadViewSet, 'discapacidad')
-router.register('religion', ReligionViewSet, 'religion')
-router.register('departamento', DepartamentoViewSet, 'departamento')
-router.register('delegacionDepartamental', DelegacionDepartamentalViewSet, 'delegacionDepartamental')
-router.register('zona', ZonaViewSet, 'zona')
-router.register('barrio', BarrioViewSet, 'barrio')
+router.register('Genders', GenderViewSet, 'Genders'),
+router.register('Grades', GradeViewSet, 'Grades')
+router.register('Subjects', SubjectViewSet, 'Subjects')
+router.register('Municipalities', MunicipalityViewSet, 'Municipalities')
+router.register('EducationalLevels', EducationalLevelViewSet, 'EducationalLevels')
+router.register('Modalities', ModalityViewSet, 'Modalities')
+router.register('Sections', SectionViewSet, 'Sections')
+router.register('Shifts', ShiftViewSet, 'Shifts')
+router.register('EducationalInstitutions', EducationalInstitutionViewSet, 'EducationalInstitutions')
+router.register('EnrolmentTypes', EnrolmentTypeViewSet, 'EnrolmentTypes')
+router.register('Cities', CityViewSet, 'Cities')
+router.register('Countries', CountryViewSet, 'Countries')
+router.register('Languages', LanguageViewSet, 'Languages')
+router.register('Ethnicities', EthnicityViewSet, 'Ethnicities')
+router.register('Disabilities', DisabilityViewSet, 'Disabilities')
+router.register('religions', ReligionViewSet, 'religions')
+router.register('Departaments', DepartamentViewSet, 'Departaments')
+router.register('DepartamentalDelegations', DepartamentalDelegationViewSet, 'DepartamentalDelegations')
+router.register('Zones', ZoneViewSet, 'Zones')
+router.register('Districts', DistrictViewSet, 'Districts')
 
 urlpatterns = router.urls

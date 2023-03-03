@@ -1,142 +1,142 @@
 from rest_framework import viewsets, permissions
 
-from .models import Sexo
-from .models import Grado
-from .models import Asignatura
-from .models import Municipio
-from .models import NivelEducativo
-from .models import Modalidad
-from .models import Seccion
-from .models import Turno
-from .models import CentroEducativo
-from .models import TipoIngreso
-from .models import Ciudad
-from .models import Pais
-from .models import Idioma
-from .models import Etnia
-from .models import Discapacidad
+from .models import Gender
+from .models import Grade
+from .models import Subject
+from .models import Municipality
+from .models import EducationalLevel
+from .models import Modality
+from .models import Section
+from .models import Shift
+from .models import EducationalInstitution
+from .models import EnrolmentType
+from .models import City
+from .models import Country
+from .models import Language
+from .models import Ethnicity
+from .models import Disability
 from .models import Religion
-from .models import Departamento
-from .models import DelegacionDepartamental
-from .models import Zona
-from .models import Barrio
-from .serializers import SexoSerializer
-from .serializers import GradoSerializer
-from .serializers import AsignaturaSerializer
-from .serializers import MunicipioSerializer
-from .serializers import NivelEducativoSerializer
-from .serializers import ModalidadSerializer
-from .serializers import SeccionSerializer
-from .serializers import TurnoSerializer
-from .serializers import CentroEducativoSerializer
-from .serializers import TipoIngresoSerializer
-from .serializers import CiudadSerializer
-from .serializers import PaisSerializer
-from .serializers import IdiomaSerializer
-from .serializers import EtniaSerializer
-from .serializers import DiscapacidadSerializer
+from .models import Departament
+from .models import DepartamentalDelegation
+from .models import Zone
+from .models import District
+from .serializers import GenderSerializer
+from .serializers import GradeSerializer
+from .serializers import SubjectSerializer
+from .serializers import MunicipalitySerializer
+from .serializers import EducationalLevelSerializer
+from .serializers import ModalitySerializer
+from .serializers import SectionSerializer
+from .serializers import ShiftSerializer
+from .serializers import EducationalInstitutionSerializer
+from .serializers import EnrolmentTypeSerializer
+from .serializers import CitySerializer
+from .serializers import CountrySerializer
+from .serializers import LanguageSerializer
+from .serializers import EthnicitySerializer
+from .serializers import DisabilitySerializer
 from .serializers import ReligionSerializer
-from .serializers import DepartamentoSerializer
-from .serializers import DelegacionDepartamentalSerializer
-from .serializers import ZonaSerializer
-from .serializers import BarrioSerializer
+from .serializers import DepartamentSerializer
+from .serializers import DepartamentalDelegationSerializer
+from .serializers import ZoneSerializer
+from .serializers import DistrictSerializer
 
-class SexoViewSet(viewsets.ModelViewSet):
-    queryset = Sexo.objects.all()
+class GenderViewSet(viewsets.ModelViewSet):
+    queryset = Gender.objects.all()
     permission_classes = [permissions.AllowAny]
-    serializer_class = SexoSerializer
+    serializer_class = GenderSerializer
 
-class GradoViewSet(viewsets.ModelViewSet):
-    queryset = Grado.objects.all()
+class GradeViewSet(viewsets.ModelViewSet):
+    queryset = Grade.objects.all()
     permission_classes = [permissions.AllowAny]
-    serializer_class = GradoSerializer 
+    serializer_class = GradeSerializer 
 
-class AsignaturaViewSet(viewsets.ModelViewSet):
-    queryset = Asignatura.objects.all()
+class SubjectViewSet(viewsets.ModelViewSet):
+    queryset = Subject.objects.all()
     permission_classes = [permissions.AllowAny]
-    serializer_class = AsignaturaSerializer
+    serializer_class = SubjectSerializer
 
-class MunicipioViewSet(viewsets.ModelViewSet):
-    queryset = Municipio.objects.all()
+class MunicipalityViewSet(viewsets.ModelViewSet):
+    queryset = Municipality.objects.all()
     permission_classes = [permissions.AllowAny]
-    serializer_class = MunicipioSerializer
+    serializer_class = MunicipalitySerializer
 
-class NivelEducativoViewSet(viewsets.ModelViewSet):
-    queryset = NivelEducativo.objects.all()
+class EducationalLevelViewSet(viewsets.ModelViewSet):
+    queryset = EducationalLevel.objects.all()
     permission_classes = [permissions.AllowAny]
-    serializer_class = NivelEducativoSerializer 
+    serializer_class = EducationalLevelSerializer
 
-class ModalidadViewSet(viewsets.ModelViewSet):
-    queryset = Modalidad.objects.all()
+class ModalityViewSet(viewsets.ModelViewSet):
+    queryset = Modality.objects.all()
     permission_classes = [permissions.AllowAny]
-    serializer_class = ModalidadSerializer 
+    serializer_class = ModalitySerializer
 
-class SeccionViewSet(viewsets.ModelViewSet):
-    queryset = Seccion.objects.all()
+class SectionViewSet(viewsets.ModelViewSet):
+    queryset = Section.objects.all()
     permission_classes = [permissions.AllowAny]
-    serializer_class = SeccionSerializer 
+    serializer_class = SectionSerializer 
 
-class TurnoViewSet(viewsets.ModelViewSet):
-    queryset = Turno.objects.all()
+class ShiftViewSet(viewsets.ModelViewSet):
+    queryset = Shift.objects.all()
     permission_classes = [permissions.AllowAny]
-    serializer_class = TurnoSerializer
+    serializer_class = ShiftSerializer
 
-class CentroEducativoViewSet(viewsets.ModelViewSet):
-    queryset = CentroEducativo.objects.all()
+class EducationalInstitutionViewSet(viewsets.ModelViewSet):
+    queryset = EducationalInstitution.objects.all()
     permission_classes = [permissions.AllowAny]
-    serializer_class = CentroEducativoSerializer
+    serializer_class = EducationalInstitutionSerializer
 
-class TipoIngresoViewSet(viewsets.ModelViewSet):
-    queryset = TipoIngreso.objects.all()
+class EnrolmentTypeViewSet(viewsets.ModelViewSet):
+    queryset = EnrolmentType.objects.all()
     permission_classes = [permissions.AllowAny]
-    serializer_class = TipoIngresoSerializer 
+    serializer_class = EnrolmentTypeSerializer 
 
-class CiudadViewSet(viewsets.ModelViewSet):
-    queryset = Ciudad.objects.all()
+class CityViewSet(viewsets.ModelViewSet):
+    queryset = City.objects.all()
     permission_classes = [permissions.AllowAny]
-    serializer_class = CiudadSerializer 
+    serializer_class = CitySerializer 
 
-class PaisViewSet(viewsets.ModelViewSet):
-    queryset = Pais.objects.all()
+class CountryViewSet(viewsets.ModelViewSet):
+    queryset = Country.objects.all()
     permission_classes = [permissions.AllowAny]
-    serializer_class = PaisSerializer 
+    serializer_class = CountrySerializer
 
-class IdiomaViewSet(viewsets.ModelViewSet):
-    queryset = Idioma.objects.all()
+class LanguageViewSet(viewsets.ModelViewSet):
+    queryset = Language.objects.all()
     permission_classes = [permissions.AllowAny]
-    serializer_class = IdiomaSerializer 
+    serializer_class = LanguageSerializer 
 
-class EtniaViewSet(viewsets.ModelViewSet):
-    queryset = Etnia.objects.all()
+class EthnicityViewSet(viewsets.ModelViewSet):
+    queryset = Ethnicity.objects.all()
     permission_classes = [permissions.AllowAny]
-    serializer_class = EtniaSerializer 
+    serializer_class = EthnicitySerializer 
 
-class DiscapacidadViewSet(viewsets.ModelViewSet):
-    queryset = Discapacidad.objects.all()
+class DisabilityViewSet(viewsets.ModelViewSet):
+    queryset = Disability.objects.all()
     permission_classes = [permissions.AllowAny]
-    serializer_class = DiscapacidadSerializer 
+    serializer_class = DisabilitySerializer 
 
 class ReligionViewSet(viewsets.ModelViewSet):
     queryset = Religion.objects.all()
     permission_classes = [permissions.AllowAny]
     serializer_class = ReligionSerializer 
 
-class DepartamentoViewSet(viewsets.ModelViewSet):
-    queryset = Departamento.objects.all()
+class DepartamentViewSet(viewsets.ModelViewSet):
+    queryset = Departament.objects.all()
     permission_classes = [permissions.AllowAny]
-    serializer_class = DepartamentoSerializer 
+    serializer_class = DepartamentSerializer 
 
-class DelegacionDepartamentalViewSet(viewsets.ModelViewSet):
-    queryset = DelegacionDepartamental.objects.all()
+class DepartamentalDelegationViewSet(viewsets.ModelViewSet):
+    queryset = DepartamentalDelegation.objects.all()
     permission_classes = [permissions.AllowAny]
-    serializer_class = DelegacionDepartamentalSerializer 
+    serializer_class = DepartamentalDelegationSerializer 
 
-class ZonaViewSet(viewsets.ModelViewSet):
-    queryset = Zona.objects.all()
+class ZoneViewSet(viewsets.ModelViewSet):
+    queryset = Zone.objects.all()
     permission_classes = [permissions.AllowAny]
-    serializer_class = ZonaSerializer
+    serializer_class = ZoneSerializer
 
-class BarrioViewSet(viewsets.ModelViewSet):
-    queryset = Barrio.objects.all()
+class DistrictViewSet(viewsets.ModelViewSet):
+    queryset = District.objects.all()
     permission_classes = [permissions.AllowAny]
-    serializer_class = BarrioSerializer
+    serializer_class = DistrictSerializer
