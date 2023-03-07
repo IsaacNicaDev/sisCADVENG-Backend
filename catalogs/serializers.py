@@ -20,6 +20,7 @@ from .models import Departament
 from .models import DepartamentalDelegation
 from .models import Zone
 from .models import District
+from .models import MaritalStatus
 
 
 class GenderSerializer(serializers.ModelSerializer):
@@ -160,3 +161,9 @@ class DistrictSerializer(serializers.ModelSerializer):
         model = District
         fields = ("id", "name", "created_at", "updated_at")
         read_only_fields = ("created_at",)
+
+class MaritalStatusSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = MaritalStatus
+        fields = ("id", "name", "created_at", "updated_at")
+        read_only_fields = ("created_at",)        

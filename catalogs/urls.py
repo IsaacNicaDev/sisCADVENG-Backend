@@ -20,28 +20,30 @@ from .api import DepartamentViewSet
 from .api import DepartamentalDelegationViewSet
 from .api import ZoneViewSet
 from .api import DistrictViewSet
+from .api import MaritalStatusViewSet
 
 router = routers.DefaultRouter()
 
-router.register('genders', GenderViewSet, 'Genders'),
-router.register('grades', GradeViewSet, 'Grades')
-router.register('subjects', SubjectViewSet, 'Subjects')
-router.register('municipalities', MunicipalityViewSet, 'Municipalities')
-router.register('educational-levels', EducationalLevelViewSet, 'EducationalLevels')
-router.register('modalities', ModalityViewSet, 'Modalities')
-router.register('sections', SectionViewSet, 'Sections')
-router.register('shifts', ShiftViewSet, 'Shifts')
-router.register('educational-institutions', EducationalInstitutionViewSet, 'EducationalInstitutions')
-router.register('enrolment-types', EnrolmentTypeViewSet, 'EnrolmentTypes')
-router.register('cities', CityViewSet, 'Cities')
-router.register('countries', CountryViewSet, 'Countries')
-router.register('languages', LanguageViewSet, 'Languages')
-router.register('ethnicities', EthnicityViewSet, 'Ethnicities')
-router.register('disabilities', DisabilityViewSet, 'Disabilities')
+router.register('genders', GenderViewSet, 'genders'),
+router.register('grades', GradeViewSet, 'grades')
+router.register('subjects', SubjectViewSet, 'subjects')
+router.register('municipalities', MunicipalityViewSet, 'municipalities')
+router.register('educational-levels', EducationalLevelViewSet, 'educational-levels')
+router.register('modalities', ModalityViewSet, 'modalities')
+router.register('sections', SectionViewSet, 'sections')
+router.register('shifts', ShiftViewSet, 'shifts')
+router.register('educational-institutions', EducationalInstitutionViewSet, 'educational-institutions')
+router.register('enrolment-types', EnrolmentTypeViewSet, 'enrolment-types')
+router.register('cities', CityViewSet, 'cities')
+router.register('countries', CountryViewSet, 'countries')
+router.register('languages', LanguageViewSet, 'languages')
+router.register('ethnicities', EthnicityViewSet, 'ethnicities')
+router.register('disabilities', DisabilityViewSet, 'disabilities')
 router.register('religions', ReligionViewSet, 'religions')
-router.register('departaments', DepartamentViewSet, 'Departaments')
-router.register('departamental-delegations', DepartamentalDelegationViewSet, 'DepartamentalDelegations')
-router.register('zones', ZoneViewSet, 'Zones')
-router.register('districts', DistrictViewSet, 'Districts')
+router.register('departaments', DepartamentViewSet, 'departaments')
+router.register('departamental-delegations', DepartamentalDelegationViewSet, 'departamental-delegations')
+router.register('zones', ZoneViewSet, 'zones')
+router.register('districts', DistrictViewSet, 'districts')
+router.register('maritalstatus', MaritalStatusViewSet, 'maritalstatus')
 
 urlpatterns = router.urls

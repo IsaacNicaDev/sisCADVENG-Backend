@@ -20,6 +20,7 @@ from .models import Departament
 from .models import DepartamentalDelegation
 from .models import Zone
 from .models import District
+from .models import MaritalStatus
 from .serializers import GenderSerializer
 from .serializers import GradeSerializer
 from .serializers import SubjectSerializer
@@ -40,6 +41,7 @@ from .serializers import DepartamentSerializer
 from .serializers import DepartamentalDelegationSerializer
 from .serializers import ZoneSerializer
 from .serializers import DistrictSerializer
+from .serializers import MaritalStatusSerializer
 
 class GenderViewSet(viewsets.ModelViewSet):
     queryset = Gender.objects.all()
@@ -140,3 +142,8 @@ class DistrictViewSet(viewsets.ModelViewSet):
     queryset = District.objects.all()
     permission_classes = [permissions.AllowAny]
     serializer_class = DistrictSerializer
+
+class MaritalStatusViewSet(viewsets.ModelViewSet):
+    queryset = MaritalStatus.objects.all()
+    permission_classes = [permissions.AllowAny]
+    serializer_class = MaritalStatusSerializer    
